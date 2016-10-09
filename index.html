@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>preITP的头像制造机器</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <img src="img/logo.jpg" style="display: none">;
+    <div class="logo">
+        <div class="name">(你的名字)</div>
+    </div>
+    <form class="center">
+        姓名：
+        <input id="name" type="text" value=""></input>
+    </form>
+    <div class="next"></div>
+    <button onclick="getName()" ">提交</button>
+	<button onclick="createImg() "">生成头像</button>
+    <p>*一开始载入有较大延时是在下载字体文件请等待么么哒</p>
+    <p>**生成头像后长按下面的图片即可保存（头像有轻微失真）</p>
+    <p>***如果无法出现保存选项请双击屏幕放大后再长按</p>
+</body>
+<script type="text/javascript" src="framework/jquery.min.js"></script>
+<script type="text/javascript" src="framework/html2canvas0.5.1.js"></script>
+<script type="text/javascript" src="js/post.js"></script>
+<script>
+function getName() {
+    var name = $("#name").val();
+    console.log(name);
+    var namePrint = $(".name");
+    namePrint.text(name);
+};
+
+function createImg() {
+    html2canvas($(".logo"), {
+        onrendered: function(canvas) {
+            //生成img
+            canvas.toBlob(function(blob) {
+                post(blob);
+            });
+            var dataUrl = canvas.toDataURL();
+            var newImg = document.createElement("img");
+            newImg.src = dataUrl;
+            $(".next").html("");
+            $(".next").html(newImg);
+        }
+    })
+};
+
+$(document).ready({
+
+});
+</script>
+
+</html>

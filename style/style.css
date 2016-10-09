@@ -1,0 +1,76 @@
+@font-face {
+        font-family: qinke;
+        src: url(../font/qinke.ttf);
+    }
+    
+    .logo {
+        width: 600px;
+        height: 600px;
+        background-image: url(../img/logo.jpg);
+        background-size: 100%;
+    }
+    
+    .name {
+        position: relative;
+        font-size: 100px;
+        font-family: qinke;
+        top: 420px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: justify;
+        display: inline-block;
+        color: gray;
+    }
+    
+    button {
+        box-sizing: content-box;
+        /*button在display为block之后，chrome默认为borderbox了*/
+        display: block;
+        text-align: center;
+        width: 200px;
+        padding: 20px;
+        margin: 0 auto;
+        border-radius: 10px;
+        color: #888;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
+        cursor: pointer;
+        font-size: 22px;
+        /*测试放大的效果				 */
+        /*transform:translateY(100px);*/
+    }
+    
+    form {
+        /*display: block;*/
+        margin: 0 auto;
+        width: 200px;
+        font-size: 60px;
+    }
+    
+    input {
+        font-size: 40px;
+        width: 180px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    .logo,
+    .next,
+    p {
+        margin: 0 auto;
+    }
+    
+    .logo {
+        margin-bottom: 20px;
+    }
+    
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    p {
+        font-size: 40px;
+        text-align: center;
+    }
