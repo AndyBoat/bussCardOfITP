@@ -1,27 +1,123 @@
-@font-face {
+/*@font-face {
         font-family: qinke;
         src: url(../font/qinke.ttf);
     }
-    
+*/
+@font-face{
+        font-family: qianhei;
+        src:url(../font/qianhei.ttf);
+}
+
+
+@font-face{
+        font-family: langqian;
+        src:url(../font/langqian.otf);
+}
+
     .logo {
-        width: 600px;
-        height: 600px;
-        background-image: url(../img/logo.jpg);
+        position: relative;
+        width: 765px;
+        height: 459px;
+        background-image: url(../img/card.png);
         background-size: 100%;
     }
-    
+
     .name {
-        position: relative;
-        font-size: 100px;
-        font-family: qinke;
-        top: 420px;
-        left: 50%;
-        transform: translateX(-50%);
+        position: absolute;
+        font-size: 50px;
+        font-family: qianhei;
+        font-weight: bold;
+        top: 44%;
+        left: 41%;
         text-align: justify;
         display: inline-block;
-        color: gray;
+        color: rgb(91,89,89);
+        transform: translateX(-50%) rotate(-90deg);
     }
-    
+
+    .major
+    {
+        position: absolute;
+        font-size: 27px;
+        font-family: langqian;
+        top: 47%;
+        left: 46%;
+        text-align: justify;
+        display: inline-block;
+        color: rgb(91,89,89);
+        transform: translateX(-50%) rotate(-90deg);
+    }
+
+    .qqID
+    {
+        position: absolute;
+        font-family: qianhei;
+        left: 58%;
+        top: 25%;
+        font-size: 18px
+
+    }
+    .weixinID
+    {
+        position: absolute;
+        font-family: qianhei;
+        left: 58%;
+        top: 40%;
+        font-size: 18px
+    }
+
+    .phoneNm
+    {
+        position: absolute;
+        font-family: qianhei;
+        left: 58%;
+        top: 55%;
+        font-size: 18px
+    }
+
+    .mailAd
+    {
+        position: absolute;
+        font-family: qianhei;
+        left: 58%;
+        top: 70%;
+        font-size: 18px
+    }
+
+    .QRcode
+    {
+        position:absolute;
+        width:137px;
+        height:137px;
+        /*background-image: url(../img/QRdemo.png);*/
+        background-size: contain;
+        background-size: contain;
+        top: 35%;
+        left: 11%;
+    }
+
+    .QRmask
+    {
+        position:absolute;
+        width:137px;
+        height:137px;
+        background-color: rgba(255,255,255,0.4);
+        top: 35%;
+        left: 11%;
+
+    }
+
+    .upload-photo
+    {
+        opacity:0;
+        position:absolute;
+        font-size:22px;
+        top:0;
+        right:0;
+        cursor:pointer;
+    }
+
+
     button {
         box-sizing: content-box;
         /*button在display为block之后，chrome默认为borderbox了*/
@@ -40,37 +136,78 @@
         /*测试放大的效果				 */
         /*transform:translateY(100px);*/
     }
-    
+
     form {
         /*display: block;*/
         margin: 0 auto;
-        width: 200px;
-        font-size: 60px;
-    }
-    
-    input {
+        width: 80%;
         font-size: 40px;
+        top:50%;
+    }
+
+    input {
+        font-size: 30px;
         width: 180px;
         margin: 0 auto;
         margin-bottom: 20px;
     }
-    
+
+
+    #name
+    {
+        width:;
+    }
+
     .logo,
     .next,
     p {
         margin: 0 auto;
     }
-    
+
     .logo {
         margin-bottom: 20px;
     }
-    
+
     img {
         display: block;
         margin: 0 auto;
     }
-    
+
     p {
         font-size: 40px;
         text-align: center;
+    }
+
+
+    .wrap{
+        text-align: center;
+        font-size: 22px;
+        margin:0 auto;
+        width:200px;
+        padding:20px;
+        color: #888;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        position:relative;
+        overflow:hidden;
+        cursor:pointer;
+        z-index:1;
+        margin-bottom: 20px;
+    }
+
+
+    #major
+    {
+        width:250px;
+    }
+
+     #weixinID
+    {
+        width:250px;
+    }
+
+    #mailAd
+    {
+        width:250px;
     }
